@@ -1,0 +1,16 @@
+body{
+margin:0;font-family:Arial,sans-serif;color:#fff;text-align:center;
+background:linear-gradient(135deg,#120018,#32004b,#000);
+overflow-x:hidden}
+.overlay{position:fixed;inset:0;background:radial-gradient(circle,transparent,#0008)}
+.container{max-width:850px;margin:auto;padding:40px 20px;position:relative}
+h1{font-size:60px;color:#ff8dc7;text-shadow:0 0 20px hotpink}
+.subtitle{font-size:22px}
+img{width:280px;border-radius:20px;box-shadow:0 0 30px #ff69b4;margin:25px auto;display:block}
+.card{background:#ffffff14;padding:25px;border-radius:20px;backdrop-filter:blur(10px)}
+button{padding:14px 30px;border:0;border-radius:30px;background:#ff4f9f;color:#fff;font-size:18px;cursor:pointer}
+button:hover{transform:scale(1.05)}
+.hidden{display:none}
+#gift{margin-top:30px;padding:25px;background:#ffffff14;border-radius:20px}
+.heart{position:fixed;font-size:24px;animation:rise 8s linear forwards}
+@keyframes rise{from{transform:translateY(100vh)}to{transform:translateY(-120px);opacity:0}}
