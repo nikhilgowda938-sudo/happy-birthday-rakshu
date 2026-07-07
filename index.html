@@ -2,44 +2,241 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Rakshu ❤️</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#14001f,#32004d,#000);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+h1{
+font-size:60px;
+color:#ff7eb6;
+margin-top:30px;
+text-shadow:0 0 20px hotpink;
+}
+
+.subtitle{
+font-size:20px;
+margin-top:15px;
+margin-bottom:25px;
+}
+
+img{
+width:280px;
+border-radius:20px;
+box-shadow:0 0 30px hotpink;
+margin-bottom:30px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+line-height:1.8;
+backdrop-filter:blur(10px);
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#ff4f9d;
+color:white;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#gift{
+display:none;
+margin-top:40px;
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:24px;
+animation:fly 7s linear forwards;
+pointer-events:none;
+}
+
+@keyframes fly{
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+
 </head>
+
 <body>
-<audio id="music" controls style="position:fixed;top:10px;right:10px">
+
+<audio controls autoplay loop style="margin-top:15px;">
 <source src="birthday.mp3" type="audio/mpeg">
 </audio>
 
-<div class="overlay"></div>
-
 <div class="container">
-<h1>Happy Birthday<br>Rakshu ❤️</h1>
-<p class="subtitle">A little surprise made just for you…</p>
+
+<h1>Happy Birthday ❤️<br>Rakshu</h1>
+
+<p class="subtitle">
+A little surprise made only for you...
+</p>
 
 <img src="rakshu.jpg" alt="Rakshu">
 
 <div class="card">
-<h2>To Someone Special 💖</h2>
+
+<h2>💖 Dear Rakshu 💖</h2>
+
 <p>
-We first connected through LinkedIn.<br><br>
-Who knew that one connection would become someone so special to me?<br><br>
-Meeting you at the temple made that connection even more memorable.
-Every conversation since then has made me admire your kindness, your smile, and the person you are.<br><br>
-Today is your birthday, and I simply want to wish you happiness, success, peace, and countless reasons to smile.
-Thank you for being such a wonderful part of my life.
+
+Who knew that one LinkedIn connection would become someone so special to me?
+
+Meeting you at the temple made everything even more memorable.
+
+Every conversation since then has made me admire your kindness, your smile and the wonderful person you are.
+
+Today I don't want anything from you.
+
+I simply wish that this birthday brings you happiness, success, peace and countless reasons to smile.
+
+Thank you for becoming such a beautiful part of my life.
+
+❤️
+
 </p>
-<button onclick="showGift()">🎁 Open Your Surprise</button>
+
+<button onclick="showGift()">
+
+🎁 Open Your Surprise
+
+</button>
+
 </div>
 
-<div id="gift" class="hidden">
-<h2>✨ Surprise ✨</h2>
-<p>I hope this year brings you everything you've wished for.</p>
-<h3>Happy Birthday once again, Rakshu ❤️</h3>
-<p>— Nikhil</p>
-</div>
+<div id="gift">
+
+<h2 style="font-size:40px;color:#ffd700;">
+
+✨ Happy Birthday Rakshu ✨
+
+</h2>
+
+<br>
+
+<p style="font-size:22px;line-height:2;">
+
+I hope this year becomes the most beautiful year of your life.
+
+May all your dreams come true.
+
+Keep smiling.
+
+Stay happy.
+
+Stay blessed.
+
+And thank you...
+
+for coming into my life.
+
+❤️
+
+</p>
+
+<br>
+
+<h2>
+
+With Lots of Love ❤️
+
+</h2>
+
+<h3>
+
+— Nikhil
+
+</h3>
+
 </div>
 
-<script src="script.js"></script>
+</div>
+
+<script>
+
+function showGift(){
+
+document.getElementById("gift").style.display="block";
+
+for(let i=0;i<150;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+let arr=["❤️","🌹","✨","🎈"];
+
+h.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(18+Math.random()*20)+"px";
+
+h.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},7000);
+
+}
+
+document.getElementById("gift").scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
 </body>
 </html>
